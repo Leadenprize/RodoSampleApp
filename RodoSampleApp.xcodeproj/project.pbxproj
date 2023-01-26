@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		08AF3B20298183BB006B89D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B1F298183BB006B89D4 /* AppDelegate.swift */; };
-		08AF3B22298183BB006B89D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B21298183BB006B89D4 /* SceneDelegate.swift */; };
-		08AF3B24298183BB006B89D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B23298183BB006B89D4 /* ViewController.swift */; };
-		08AF3B27298183BB006B89D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3B25298183BB006B89D4 /* Main.storyboard */; };
+		08AF3B24298183BB006B89D4 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B23298183BB006B89D4 /* ContentViewController.swift */; };
 		08AF3B29298183BD006B89D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3B28298183BD006B89D4 /* Assets.xcassets */; };
 		08AF3B2C298183BD006B89D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3B2A298183BD006B89D4 /* LaunchScreen.storyboard */; };
 		08AF3B37298183BD006B89D4 /* RodoSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B36298183BD006B89D4 /* RodoSampleAppTests.swift */; };
 		08AF3B41298183BD006B89D4 /* RodoSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B40298183BD006B89D4 /* RodoSampleAppUITests.swift */; };
 		08AF3B43298183BD006B89D4 /* RodoSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B42298183BD006B89D4 /* RodoSampleAppUITestsLaunchTests.swift */; };
+		08AF3B50298184DD006B89D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B4F298184DD006B89D4 /* HomeViewController.swift */; };
+		08AF3B5229818525006B89D4 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B5129818524006B89D4 /* UIExtensions.swift */; };
+		08AF3B5829818758006B89D4 /* InventoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B5729818758006B89D4 /* InventoryListModel.swift */; };
+		08AF3B5A2981880B006B89D4 /* Exercise_Dataset.json in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3B592981880B006B89D4 /* Exercise_Dataset.json */; };
+		08AF3B5C29818EC5006B89D4 /* RodoSampleAppUIStyleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B5B29818EC5006B89D4 /* RodoSampleAppUIStyleSettings.swift */; };
+		08AF3B5E2981C05B006B89D4 /* VehicleTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B5D2981C05B006B89D4 /* VehicleTypeViewController.swift */; };
+		08AF3B602981EBC4006B89D4 /* HomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3B5F2981EBC4006B89D4 /* HomeViewControllerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +43,22 @@
 /* Begin PBXFileReference section */
 		08AF3B1C298183BB006B89D4 /* RodoSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RodoSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AF3B1F298183BB006B89D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08AF3B21298183BB006B89D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08AF3B23298183BB006B89D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		08AF3B26298183BB006B89D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		08AF3B23298183BB006B89D4 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		08AF3B28298183BD006B89D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08AF3B2B298183BD006B89D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		08AF3B2D298183BD006B89D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08AF3B32298183BD006B89D4 /* RodoSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RodoSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AF3B36298183BD006B89D4 /* RodoSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodoSampleAppTests.swift; sourceTree = "<group>"; };
 		08AF3B3C298183BD006B89D4 /* RodoSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RodoSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AF3B40298183BD006B89D4 /* RodoSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodoSampleAppUITests.swift; sourceTree = "<group>"; };
 		08AF3B42298183BD006B89D4 /* RodoSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodoSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		08AF3B4F298184DD006B89D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		08AF3B5129818524006B89D4 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		08AF3B5529818627006B89D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08AF3B5729818758006B89D4 /* InventoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListModel.swift; sourceTree = "<group>"; };
+		08AF3B592981880B006B89D4 /* Exercise_Dataset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exercise_Dataset.json; sourceTree = "<group>"; };
+		08AF3B5B29818EC5006B89D4 /* RodoSampleAppUIStyleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodoSampleAppUIStyleSettings.swift; sourceTree = "<group>"; };
+		08AF3B5D2981C05B006B89D4 /* VehicleTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeViewController.swift; sourceTree = "<group>"; };
+		08AF3B5F2981EBC4006B89D4 /* HomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +110,17 @@
 			isa = PBXGroup;
 			children = (
 				08AF3B1F298183BB006B89D4 /* AppDelegate.swift */,
-				08AF3B21298183BB006B89D4 /* SceneDelegate.swift */,
-				08AF3B23298183BB006B89D4 /* ViewController.swift */,
-				08AF3B25298183BB006B89D4 /* Main.storyboard */,
+				08AF3B23298183BB006B89D4 /* ContentViewController.swift */,
+				08AF3B5F2981EBC4006B89D4 /* HomeViewControllerViewModel.swift */,
+				08AF3B4F298184DD006B89D4 /* HomeViewController.swift */,
+				08AF3B5D2981C05B006B89D4 /* VehicleTypeViewController.swift */,
+				08AF3B5129818524006B89D4 /* UIExtensions.swift */,
+				08AF3B5B29818EC5006B89D4 /* RodoSampleAppUIStyleSettings.swift */,
+				08AF3B5729818758006B89D4 /* InventoryListModel.swift */,
+				08AF3B592981880B006B89D4 /* Exercise_Dataset.json */,
 				08AF3B28298183BD006B89D4 /* Assets.xcassets */,
 				08AF3B2A298183BD006B89D4 /* LaunchScreen.storyboard */,
-				08AF3B2D298183BD006B89D4 /* Info.plist */,
+				08AF3B5529818627006B89D4 /* Info.plist */,
 			);
 			path = RodoSampleApp;
 			sourceTree = "<group>";
@@ -232,8 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08AF3B2C298183BD006B89D4 /* LaunchScreen.storyboard in Resources */,
+				08AF3B5A2981880B006B89D4 /* Exercise_Dataset.json in Resources */,
 				08AF3B29298183BD006B89D4 /* Assets.xcassets in Resources */,
-				08AF3B27298183BB006B89D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08AF3B24298183BB006B89D4 /* ViewController.swift in Sources */,
+				08AF3B602981EBC4006B89D4 /* HomeViewControllerViewModel.swift in Sources */,
+				08AF3B5829818758006B89D4 /* InventoryListModel.swift in Sources */,
+				08AF3B24298183BB006B89D4 /* ContentViewController.swift in Sources */,
+				08AF3B5E2981C05B006B89D4 /* VehicleTypeViewController.swift in Sources */,
 				08AF3B20298183BB006B89D4 /* AppDelegate.swift in Sources */,
-				08AF3B22298183BB006B89D4 /* SceneDelegate.swift in Sources */,
+				08AF3B50298184DD006B89D4 /* HomeViewController.swift in Sources */,
+				08AF3B5C29818EC5006B89D4 /* RodoSampleAppUIStyleSettings.swift in Sources */,
+				08AF3B5229818525006B89D4 /* UIExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		08AF3B25298183BB006B89D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08AF3B26298183BB006B89D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		08AF3B2A298183BD006B89D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +453,6 @@
 				INFOPLIST_FILE = RodoSampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +479,6 @@
 				INFOPLIST_FILE = RodoSampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
