@@ -45,7 +45,7 @@ class HomeViewControllerViewModel {
             }
         }
         else{
-            // THIS IS EASY, ONE WORD SEARCH NO SPACES, SO IT IS EITHER MAKE OR IT IS MODEL
+            // ONE WORD SEARCH NO SPACES, FIRST TRY MAKE THEN TRY MODEL
             searchFilters.append( FilterParameter<String>("make",option1: optionalString1, option2: "" ) )
             resultList = searchInventoryList( searchFilters: searchFilters )
             if( resultList.count == 0 ){
@@ -57,7 +57,7 @@ class HomeViewControllerViewModel {
         
         
         if( resultList.count == 0 ){
-            // Last Try lets just throw it all in one and then all in the other
+            // LAST TRY SO ASSUME THEY ENTERED A MULTIWORD MODEL OR A MULTIWORD MAKE
             searchFilters.removeAll()
             searchFilters.append( FilterParameter<String>("model",option1: searchMakeAndModel, option2: "" ) )
             resultList = searchInventoryList( searchFilters: searchFilters )
@@ -68,6 +68,7 @@ class HomeViewControllerViewModel {
                 resultList = searchInventoryList( searchFilters: searchFilters )
             }
         }
+        // Calculate and return
         // Total Number of vehicles available that matches the faceted search parameters
         // Find the Lowest, Median, and Highest Price of the vehicle that matches the price
         resultList = resultList.sorted{  $0.price < $1.price }
