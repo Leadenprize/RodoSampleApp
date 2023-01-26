@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-
+// Helper methods to make it easier on the rest
 
 // *** NEEDED FOR iOS 11 Support
 // Convenience Wrapper around UIControls so you can addAction easier

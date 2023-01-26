@@ -20,12 +20,14 @@ struct VehicleTypeItem {
     }
 }
 
+// This is the Vehicle Type Detail screen seen after HomeView
+
 class VehicleTypeViewController: UIViewController {
     
     // Keep track of last vehicle Tapped
-    var vehicleSelectedIndex:Int = -1
+    public var vehicleSelectedIndex:Int = -1
     
-    var vehicleTypes:[VehicleTypeItem] = [
+    public var vehicleTypes:[VehicleTypeItem] = [
         VehicleTypeItem( "compact", "Compact" ),
         VehicleTypeItem( "convertible", "Convertible" ),
         VehicleTypeItem( "coupe", "Coupe" ),
@@ -62,7 +64,7 @@ class VehicleTypeViewController: UIViewController {
         
     }
     
-    var BGView = UIView( frame:CGRectZero )
+    private var BGView = UIView( frame:CGRectZero )
     
     func setupUI(){
 

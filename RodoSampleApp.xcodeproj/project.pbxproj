@@ -86,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0896F30D298314CE00AE4C84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08AF3B2A298183BD006B89D4 /* LaunchScreen.storyboard */,
+				08AF3B592981880B006B89D4 /* Exercise_Dataset.json */,
+				08AF3B28298183BD006B89D4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		08AF3B13298183BB006B89D4 = {
 			isa = PBXGroup;
 			children = (
@@ -110,16 +120,14 @@
 			isa = PBXGroup;
 			children = (
 				08AF3B1F298183BB006B89D4 /* AppDelegate.swift */,
-				08AF3B23298183BB006B89D4 /* ContentViewController.swift */,
+				08AF3B5729818758006B89D4 /* InventoryListModel.swift */,
 				08AF3B5F2981EBC4006B89D4 /* HomeViewControllerViewModel.swift */,
+				08AF3B23298183BB006B89D4 /* ContentViewController.swift */,
 				08AF3B4F298184DD006B89D4 /* HomeViewController.swift */,
 				08AF3B5D2981C05B006B89D4 /* VehicleTypeViewController.swift */,
 				08AF3B5129818524006B89D4 /* UIExtensions.swift */,
 				08AF3B5B29818EC5006B89D4 /* RodoSampleAppUIStyleSettings.swift */,
-				08AF3B5729818758006B89D4 /* InventoryListModel.swift */,
-				08AF3B592981880B006B89D4 /* Exercise_Dataset.json */,
-				08AF3B28298183BD006B89D4 /* Assets.xcassets */,
-				08AF3B2A298183BD006B89D4 /* LaunchScreen.storyboard */,
+				0896F30D298314CE00AE4C84 /* Resources */,
 				08AF3B5529818627006B89D4 /* Info.plist */,
 			);
 			path = RodoSampleApp;

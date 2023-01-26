@@ -11,6 +11,7 @@ import UIKit
 class HomeViewControllerViewModel {
     
     var searchMakeAndModel: String = ""
+
     var inventoryListModel:InventoryListModel<CarItem>?
     
     func setupInventory(){
@@ -105,7 +106,6 @@ class HomeViewControllerViewModel {
         print(String(bytes: resultsjsonData, encoding: String.Encoding.utf8) ?? "")
         
         // RETURN JSON
-        
         return results
         
     }

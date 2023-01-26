@@ -14,6 +14,11 @@ protocol HomeViewControllerDelegate {
 }
 
 
+// HomeViewController is the tab corresponding to Home
+// It is also the SearchView.
+// The HomeVIewControllerViewModel holds the Logic for HomeViewController's searching
+// It is a delegate for the VehicleTypeViewController, which is used
+// for updating UI: tabBar
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     
