@@ -110,7 +110,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         
         button2.addAction(for: .touchUpInside) {
             self.homeViewControllerViewModel.searchMakeAndModel = self.searchTextField?.text ?? ""
-            self.homeViewControllerViewModel.searchInventoryListPrepare()
+            self.homeViewControllerViewModel.setupInventory()
+            self.homeViewControllerViewModel.searchInventory()
         }
     }
     

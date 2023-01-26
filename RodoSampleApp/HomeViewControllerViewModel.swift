@@ -11,8 +11,15 @@ import UIKit
 class HomeViewControllerViewModel {
     
     var searchMakeAndModel: String = ""
+    var inventoryListModel:InventoryListModel<CarItem>?
     
-    func searchInventoryListPrepare()->[String:Int]{
+    func setupInventory(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        inventoryListModel = appDelegate.carInventoryListModel
+    }
+    
+    
+    func searchInventory()->[String:Int]{
         var searchFilters:[Any] = []
         
         var optionalString1 = searchMakeAndModel
@@ -49,7 +56,6 @@ class HomeViewControllerViewModel {
         
         
         if( resultList.count == 0 ){
-            print( "SEARCHING \(searchMakeAndModel)")
             // Last Try lets just throw it all in one and then all in the other
             searchFilters.removeAll()
             searchFilters.append( FilterParameter<String>("model",option1: searchMakeAndModel, option2: "" ) )
@@ -75,9 +81,6 @@ class HomeViewControllerViewModel {
                 medianPrice = resultList[ resultList.count/2].price
             }
             else{
-                print( "Count: \(resultList.count) \(resultList.count/2)")
-                var x = (resultList.count/2)+1
-                print( "\(x)")
                 medianPrice = ( resultList[ resultList.count/2].price+resultList[ (resultList.count/2)+1].price )/2
             }
             lowestPrice = resultList.first?.price ?? 0
@@ -86,7 +89,6 @@ class HomeViewControllerViewModel {
         
         // PRINT RESULTS?
         guard let jsonData = try? JSONEncoder().encode(resultList) else {
-            print("JSON Encoding Failed")
             return [:]
         }
         print(String(bytes: jsonData, encoding: String.Encoding.utf8) ?? "")
@@ -98,20 +100,21 @@ class HomeViewControllerViewModel {
                        "medianPrice":medianPrice
                     ]
         guard let resultsjsonData = try? JSONEncoder().encode(results) else {
-            print("JSON Encoding Failed")
             return [:]
         }
         print(String(bytes: resultsjsonData, encoding: String.Encoding.utf8) ?? "")
         
         // RETURN JSON
+        
         return results
         
     }
     
     func searchInventoryList(searchFilters:[Any])->[CarItem]{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let inventoryListModel:InventoryListModel<CarItem> = appDelegate.carInventoryListModel
-        var inventoryListResults:[CarItem] = inventoryListModel.filterWithSearchFilters( searchFilters: searchFilters)
+        guard let inventoryList:InventoryListModel<CarItem> = inventoryListModel else{
+            return []
+        }
+        let inventoryListResults:[CarItem] = inventoryList.filterWithSearchFilters( searchFilters: searchFilters)
         
         return inventoryListResults
     }

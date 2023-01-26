@@ -8,7 +8,9 @@
 import Foundation
 
 enum LoadObjectError: Error {
-    case fileIssue
+    case filefoundIssue
+    case fileformatIssue
+    case filereadIssue
 }
 
 protocol KeyCodingValued {
@@ -112,7 +114,7 @@ class InventoryListModel<T:KeyCodingValued&Codable>  {
                     if( ( lowValue == nil || value >= lowValue ?? 0 ) &&
                         ( highValue == nil || value <= highValue ?? 0 )
                     ){
-                    // print( "\(lowValue) < \(value) < \(highValue) for \(nameOfElement)")
+                    //    print( "\(lowValue) < \(value) < \(highValue) for \(nameOfElement)")
                     }
                     else{
                         matches = false
@@ -143,19 +145,19 @@ class InventoryListModel<T:KeyCodingValued&Codable>  {
 func loadObjectFromBundle<T:Decodable>(_ filename: String ) throws -> T  {
     let data : Data
     guard let file = Bundle.main.url( forResource: filename, withExtension: nil ) else{
-        throw LoadObjectError.fileIssue
+        throw LoadObjectError.filefoundIssue
         
     }
     do {
         data = try Data(contentsOf: file )
     } catch {
-        throw LoadObjectError.fileIssue
+        throw LoadObjectError.filereadIssue
     }
     do {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from:data )
     } catch {
-        throw LoadObjectError.fileIssue
+        throw LoadObjectError.fileformatIssue
     }
 }
   
